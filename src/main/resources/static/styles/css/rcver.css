@@ -1,0 +1,58 @@
+ul {
+  list-style-type: none;
+}
+
+.ballot-container {
+	overflow-y:auto;
+    position:absolute;
+    width:300px;
+    background:#063;
+    bottom:0px;
+    right:25%;
+    left:50%;
+    margin-left:-150px;
+}
+
+.ballot-inputs {
+	display: block;
+    margin-left: auto;
+    margin-right: auto
+}  
+
+.candidate-selected {
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid rgba(81, 203, 238, 1);
+}
+
+.collapsible {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #ccc;
+}
+
+.content {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.vote-button {
+	width: 300px;
+}
+
+  
+  

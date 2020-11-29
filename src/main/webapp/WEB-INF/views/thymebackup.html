@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<link th:href="@{/styles/css/rcver.css}" rel="stylesheet" />
+	<script src="/webjars/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript" th:src="@{/js/rcver.js}"></script>
+    <title>Template</title>
+</head>
+<body>
+<h1>RCVER</h1>
+<p>Choice list:</p>
+<form action="#" th:action="@{/vote}" th:object="${ballot}" method="post">
+
+	<table>
+		<tr th:each="candidate,iter : ${ballot.candidates}">
+			<td><button th:name="|candidateActionButton${iter.index}|" type="button">Add</button>&nbsp;<span th:text="${candidate}"/></td>
+			<td><input th:name="|ballotInput${iter.index}|" type="text" th:field="*{rankedCandidates[__${iter.index}__]}"></input></td>
+			
+       </tr>
+	
+	
+		<!-- <p class="candidate-list" th:each="candidate,iter : ${ballot.candidates}" th:text="${iter.index}"><input type="text"></input></p>-->
+		 
+	</table>
+	<button type="submit">Vote</button>
+</form>
+
+</body>
+</html>
